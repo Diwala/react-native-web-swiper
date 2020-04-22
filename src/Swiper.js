@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Animated, PanResponder, StyleSheet, View, ViewPropTypes } from 'react-native';
+import { Animated, PanResponder, StyleSheet, View } from 'react-native';
 
 import DefaultControls from './Controls';
 
@@ -288,33 +287,6 @@ class Swiper extends React.Component {
     );
   }
 }
-
-Swiper.propTypes = {
-  vertical: PropTypes.bool,
-  from: PropTypes.number,
-  loop: PropTypes.bool,
-  timeout: PropTypes.number,
-  gesturesEnabled: PropTypes.func,
-  springConfig: PropTypes.object,
-  minDistanceToCapture: PropTypes.number, // inside ScrollView
-  minDistanceForAction: PropTypes.number,
-
-  onAnimationStart: PropTypes.func,
-  onAnimationEnd: PropTypes.func,
-  onIndexChanged: PropTypes.func,
-
-  positionFixed: PropTypes.bool, // Fix safari vertical bounces
-  containerStyle: ViewPropTypes.style,
-  innerContainerStyle: ViewPropTypes.style,
-  swipeAreaStyle: ViewPropTypes.style,
-  slideWrapperStyle: ViewPropTypes.style,
-
-  controlsEnabled: PropTypes.bool,
-  controlsProps: PropTypes.shape(DefaultControls.propTypes),
-  Controls: PropTypes.func,
-
-  theme: PropTypes.object,
-};
 
 Swiper.defaultProps = {
   vertical: false,

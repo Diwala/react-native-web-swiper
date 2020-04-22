@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, ViewPropTypes } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import { nodeType } from './nodeType';
 import { renderNode } from './renderNode';
 
 import { Badge } from './Badge';
@@ -197,47 +195,47 @@ export default class DefaultControls extends React.Component {
   }
 }
 
-DefaultControls.propTypes = {
-  cellsStyle: PropTypes.shape(
-    cellPositions.reduce(
-      (obj, item) => ({ ...obj, [item]: ViewPropTypes.style }),
-      {}
-    )
-  ),
-  cellsContent: PropTypes.shape(
-    cellPositions.reduce((obj, item) => ({ ...obj, [item]: nodeType }), {})
-  ),
+// DefaultControls.propTypes = {
+//   cellsStyle: PropTypes.shape(
+//     cellPositions.reduce(
+//       (obj, item) => ({ ...obj, [item]: ViewPropTypes.style }),
+//       {}
+//     )
+//   ),
+//   cellsContent: PropTypes.shape(
+//     cellPositions.reduce((obj, item) => ({ ...obj, [item]: nodeType }), {})
+//   ),
 
-  dotsPos: PropTypes.oneOf([...cellPositions, true, false]),
-  prevPos: PropTypes.oneOf([...cellPositions, true, false]),
-  nextPos: PropTypes.oneOf([...cellPositions, true, false]),
-  prevTitle: PropTypes.string,
-  nextTitle: PropTypes.string,
+//   dotsPos: PropTypes.oneOf([...cellPositions, true, false]),
+//   prevPos: PropTypes.oneOf([...cellPositions, true, false]),
+//   nextPos: PropTypes.oneOf([...cellPositions, true, false]),
+//   prevTitle: PropTypes.string,
+//   nextTitle: PropTypes.string,
 
-  dotsTouchable: PropTypes.bool,
-  dotsWrapperStyle: ViewPropTypes.style,
+//   dotsTouchable: PropTypes.bool,
+//   dotsWrapperStyle: ViewPropTypes.style,
 
-  dotProps: PropTypes.shape(Badge.propTypes),
-  dotActiveStyle: ViewPropTypes.style,
-  DotComponent: PropTypes.func,
+//   dotProps: PropTypes.shape(Badge.propTypes),
+//   dotActiveStyle: ViewPropTypes.style,
+//   DotComponent: PropTypes.func,
 
-  prevTitleStyle: Text.propTypes.style,
-  nextTitleStyle: Text.propTypes.style,
-  PrevComponent: PropTypes.func,
-  NextComponent: PropTypes.func,
-  firstPrevElement: nodeType,
-  lastNextElement: nodeType,
+//   prevTitleStyle: Text.propTypes.style,
+//   nextTitleStyle: Text.propTypes.style,
+//   PrevComponent: PropTypes.func,
+//   NextComponent: PropTypes.func,
+//   firstPrevElement: nodeType,
+//   lastNextElement: nodeType,
 
-  theme: PropTypes.object,
-  vertical: PropTypes.bool,
-  count: PropTypes.number,
-  activeIndex: PropTypes.number,
-  isFirst: PropTypes.bool,
-  isLast: PropTypes.bool,
-  goToPrev: PropTypes.func,
-  goToNext: PropTypes.func,
-  goTo: PropTypes.func,
-};
+//   theme: PropTypes.object,
+//   vertical: PropTypes.bool,
+//   count: PropTypes.number,
+//   activeIndex: PropTypes.number,
+//   isFirst: PropTypes.bool,
+//   isLast: PropTypes.bool,
+//   goToPrev: PropTypes.func,
+//   goToNext: PropTypes.func,
+//   goTo: PropTypes.func,
+// };
 
 DefaultControls.defaultProps = {
   prevTitle: 'Prev',

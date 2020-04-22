@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, ViewPropTypes, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { renderNode } from './renderNode';
 
@@ -38,16 +37,16 @@ const Badge = props => {
   );
 };
 
-Badge.propTypes = {
-  containerStyle: ViewPropTypes.style,
-  badgeStyle: ViewPropTypes.style,
-  textStyle: Text.propTypes.style,
-  value: PropTypes.node,
-  onPress: PropTypes.func,
-  Component: PropTypes.func,
-  theme: PropTypes.object,
-  status: PropTypes.oneOf(['primary', 'success', 'warning', 'error']),
-};
+// Badge.propTypes = {
+//   containerStyle: ViewPropTypes.style,
+//   badgeStyle: ViewPropTypes.style,
+//   textStyle: Text.propTypes.style,
+//   value: PropTypes.node,
+//   onPress: PropTypes.func,
+//   Component: PropTypes.func,
+//   theme: PropTypes.object,
+//   status: PropTypes.oneOf(['primary', 'success', 'warning', 'error']),
+// };
 
 Badge.defaultProps = {
   status: 'primary',
