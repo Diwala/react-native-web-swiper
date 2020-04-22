@@ -20,9 +20,6 @@
     "build": "rm -rf build && babel src --out-dir build",
     "prepare": "npm run build"
   },
-  "dependencies": {
-    "prop-types": "^15.6.2"
-  },
   "peerDependencies": {
     "react-native": "*"
   },
