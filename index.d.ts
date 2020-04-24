@@ -46,6 +46,12 @@ interface SwiperControlsCellsContent {
     'bottom-right'?: React.ReactElement<{}>;
 }
 
+export interface DotComponentProps {
+    index: number;
+    isActive: boolean;
+    onPress: () => void;
+}
+
 export interface BadgeProps {
     /**
      * Text value to be displayed by badge
@@ -160,8 +166,8 @@ interface SwiperControlsProps {
     /**
      * Custom dot component
      */
-    DotComponent?: React.ComponentClass;
-
+    DotComponent?: React.FC<DotComponentProps>;
+ 
     /**
      * Customize prev button title
      */
